@@ -7,7 +7,7 @@ import os
 # 1. SETUP & HELPER FUNCTIONS
 
 #  API KEY IS PRE-LOADED HERE
-GROQ_API_KEY = "PASTE_GROQ_API_KEY"
+GROQ_API_KEY = "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"
 client = Groq(api_key=GROQ_API_KEY)
 
 SUPER_PROMPT = """
@@ -139,4 +139,5 @@ if st.session_state['video_processed'] and st.session_state['clips_data']:
                         st.download_button("Download", d_file, file_name=output_name, key=f"dl_{i}")
                         
                 except Exception as e:
+
                     st.error(f"Render Error: {e}")
