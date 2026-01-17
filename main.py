@@ -127,7 +127,6 @@ if st.session_state['video_processed'] and st.session_state['clips_data']:
                     with VideoFileClip("temp_video.mp4") as video:
                         # 1. Cut Video
                         new_clip = video.subclipped(max(0, adj_start), adj_end)
-                        g
                         
                         new_clip.write_videofile(output_name, codec="libx264", audio_codec="aac", logger=None)
                     
@@ -141,3 +140,4 @@ if st.session_state['video_processed'] and st.session_state['clips_data']:
                 except Exception as e:
 
                     st.error(f"Render Error: {e}")
+
